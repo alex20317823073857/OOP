@@ -37,8 +37,8 @@ namespace TestProject1
 
                 var consoleOut = new[]
                 {
-                "Структура Time, 12:34:56",
-                "Структура Time, 23:50:16",
+                "РЎС‚СЂСѓРєС‚СѓСЂР° Time, 12:34:56",
+                "РЎС‚СЂСѓРєС‚СѓСЂР° Time, 23:50:16",
                 };
 
                 TextWriter oldOut = Console.Out;
