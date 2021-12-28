@@ -8,12 +8,13 @@ namespace Facilities
 {
     public class Facade
     {
-        public Support support = new Support();
+        Support support;
 
-        public int DoWorkCalls()
+        public int DoCalls()
         {
             int counter = 0;
-            
+
+            support = new Support();
             support.Engineer.SubmitNetworkRequest();
             support.Electrician.SubmitNetworkRequest();
             support.Technician.SubmitNetworkRequest();
@@ -63,7 +64,7 @@ namespace Facilities
             return false;
         }
 
-        bool CallTechnician()
+        public bool CallTechnician()
         {
             // Если техник свою работу выполнил, 
             // то запрос обслужен до конца
@@ -71,12 +72,6 @@ namespace Facilities
                 return true;
 
             return false;
-        }
-
-        public bool CurrentStateOfWork()
-        {
-            DoWorkCalls();
-            return CallTechnician();
         }
     }
 }

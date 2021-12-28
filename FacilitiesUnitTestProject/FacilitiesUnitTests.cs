@@ -10,7 +10,7 @@ namespace FacilitiesUnitTestProject
         [TestMethod]
         public void ClientTest()
         {
-            var client = new Client();
+            var client = new Facade();
 
             Assert.AreEqual(34, client.DoCalls());
         }

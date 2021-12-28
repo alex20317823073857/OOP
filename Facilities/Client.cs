@@ -6,27 +6,18 @@ using System.Threading.Tasks;
 
 namespace Facilities
 {
-    public class Client
+    class Client
     {
-        Facade facade = new Facade();
-
+        Facade facade;
         public int DoCalls()
         {
-            
             int counter = 0;
-
-            while (!CallSupport())
+            while (!facade.CallTechnician())
             {
-                CallSupport();
+                facade.DoCalls();
+                counter++;
             }
-
             return counter;
-        }
-
-        bool CallSupport()
-        {
-            facade.DoWorkCalls();
-            return facade.CurrentStateOfWork();
         }
     }
 }
